@@ -10,6 +10,8 @@
 #include "absl/strings/str_cat.h"
 #include "absl/strings/string_view.h"
 
+namespace bcf {
+
 class Err {
  public:
   explicit Err(absl::string_view msg) : msg_(msg) {}
@@ -131,6 +133,8 @@ class Result<void> {
   bool ok_ = false;
   bool destroyed_ = false;
 };
+
+}  // namespace bcf
 
 #define TRY(expr)       \
   ({                    \

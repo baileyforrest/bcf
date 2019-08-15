@@ -6,6 +6,8 @@
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 
+namespace bcf {
+
 using testing::_;
 
 namespace {
@@ -57,3 +59,5 @@ TEST(OnceCallbackTest, MethodMove) {
       });
   bound();
 }
+
+}  // namespace bcf

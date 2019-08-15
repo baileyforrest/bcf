@@ -10,6 +10,8 @@
 #include "base/err.h"
 #include "base/reader.h"
 
+namespace bcf {
+
 class FileReader : public Reader {
  public:
   static Result<FileReader> Create(absl::string_view path);
@@ -33,5 +35,7 @@ class FileReader : public Reader {
   size_t size_ = 0;
   bool eof_ = false;
 };
+
+}  // namespace bcf
 
 #endif  // BASE_FILE_READER_H_

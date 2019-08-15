@@ -8,6 +8,8 @@
 #include "base/mpsc-queue.h"
 #include "base/once-callback.h"
 
+namespace bcf {
+
 // A basic TaskRunner to run tasks asynchronously in order.
 class TaskRunner {
  public:
@@ -48,5 +50,7 @@ class TaskRunner {
 
   MpscQueue<OnceCallback> tasks_;
 };
+
+}  // namespace bcf
 
 #endif  // BASE_TASK_RUNNER_H_

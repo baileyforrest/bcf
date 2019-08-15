@@ -9,6 +9,8 @@
 #include "absl/base/thread_annotations.h"
 #include "absl/synchronization/mutex.h"
 
+namespace bcf {
+
 // Multi-producer single consumer queue.
 template <typename T>
 class MpscQueue {
@@ -78,5 +80,7 @@ class MpscQueue {
   ABSL_CACHELINE_ALIGNED Node* tail_ GUARDED_BY(tail_lock_) = nullptr;
   ABSL_CACHELINE_ALIGNED absl::Mutex tail_lock_;
 };
+
+}  // namespace bcf
 
 #endif  // BASE_MPSC_QUEUE_H_

@@ -8,6 +8,8 @@
 #include "base/err.h"
 #include "base/reader.h"
 
+namespace bcf {
+
 // Applies deflate compression to the provided reader.
 class ZlibDeflateReader : public Reader {
  public:
@@ -35,5 +37,7 @@ class ZlibDeflateReader : public Reader {
   bool reader_eof_ = false;
   bool eof_ = false;
 };
+
+}  // namespace bcf
 
 #endif  // ZLIB_DEFLATE_READER_H_

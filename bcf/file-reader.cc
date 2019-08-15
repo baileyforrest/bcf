@@ -2,6 +2,8 @@
 
 #include <utility>
 
+namespace bcf {
+
 // static
 Result<FileReader> FileReader::Create(absl::string_view path) {
   // We must make a string because fopen requires a C string.
@@ -42,3 +44,5 @@ Result<ssize_t> FileReader::Read(absl::Span<char> buf) {
 
   return amount;
 }
+
+}  // namespace bcf

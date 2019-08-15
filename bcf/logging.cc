@@ -3,6 +3,8 @@
 #include <iomanip>
 #include <string>
 
+namespace bcf {
+
 #include "base/logging.h"
 
 int gVerboseLogLevel = 0;
@@ -57,3 +59,4 @@ std::ostream& GetNullStream() {
 }
 
 }  // namespace logging_internal
+}  // namespace bcf

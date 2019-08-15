@@ -6,6 +6,8 @@
 #include "base/err.h"
 #include "base/reader.h"
 
+namespace bcf {
+
 class StdinReader : public Reader {
  public:
   StdinReader() = default;
@@ -25,5 +27,7 @@ class StdinReader : public Reader {
     return fread(buf.data(), 1, buf.size(), stdin);
   }
 };
+
+}  // namespace bcf
 
 #endif  // BASE_STDIN_READER_

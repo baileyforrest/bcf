@@ -5,6 +5,8 @@
 #include <tuple>
 #include <utility>
 
+namespace bcf {
+
 namespace once_callback_internal {
 
 class BoundFunction {
@@ -43,5 +45,6 @@ class BoundFunctionImpl : public BoundFunction {
 };
 
 }  // namespace once_callback_internal
+}  // namespace bcf
 
 #endif  // ONCE_CALLBACK_INTERNAL_H_

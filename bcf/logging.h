@@ -3,6 +3,8 @@
 #include <iostream>
 #include <sstream>
 
+namespace bcf {
+
 extern int gVerboseLogLevel;
 
 class Logger {
@@ -32,6 +34,7 @@ namespace logging_internal {
 std::ostream& GetNullStream();
 
 }  // namespace logging_internal
+}  // namespace bcf
 
 #define LOG(type) Logger(Logger::Type::type, 0, __FILE__, __LINE__).stream()
 #define VLOG(level)                                                     \

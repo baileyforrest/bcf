@@ -6,6 +6,8 @@
 
 #include "absl/base/macros.h"
 
+namespace bcf {
+
 class ScopedDestructor {
  public:
   explicit ScopedDestructor(std::function<void()> on_destroy)
@@ -22,5 +24,7 @@ class ScopedDestructor {
  private:
   std::function<void()> on_destroy_;
 };
+
+}  // namespace bcf
 
 #endif  // BASE_SCOPED_DESTRUCTOR_H_

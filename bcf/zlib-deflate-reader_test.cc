@@ -4,6 +4,8 @@
 #include "base/stdin-reader.h"
 #include "base/zlib-deflate-reader.h"
 
+
+namespace bcf {
 namespace {
 
 Result<void> Run() {
@@ -23,10 +25,11 @@ Result<void> Run() {
 }
 
 }  // namespace
+}  // namespace bcf
 
 // Simple compression program which reads from stdin and writes to stdout.
 int main() {
-  auto result = Run();
+  auto result = bcf::Run();
   if (!result.ok()) {
     LOG(ERR) << result.err();
     return EXIT_FAILURE;

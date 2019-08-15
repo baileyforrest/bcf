@@ -4,6 +4,8 @@
 
 #include "gtest/gtest.h"
 
+namespace bcf {
+
 TEST(ErrTest, BuildPosixErr) {
   errno = EPERM;
   Err err = BuildPosixErr("Foo failed");
@@ -51,3 +53,5 @@ TEST(ErrTest, Try) {
   ASSERT_FALSE(res.ok());
   EXPECT_EQ(res.err().msg(), "fail");
 }
+
+}  // namespace bcf

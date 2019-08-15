@@ -7,6 +7,8 @@
 #include "base/scoped-fd.h"
 #include "gtest/gtest.h"
 
+namespace bcf {
+
 namespace {
 
 bool IsValidFd(int fd) { return fcntl(fd, F_GETFD) != -1 || errno != EBADF; }
@@ -75,3 +77,5 @@ TEST(ScopedFdTest, Operators) {
   sfd.reset();
   EXPECT_FALSE(sfd);
 }
+
+}  // namespace bcf

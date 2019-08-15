@@ -8,6 +8,7 @@
 #include "base/task-runner.h"
 #include "gtest/gtest.h"
 
+namespace bcf {
 namespace {
 
 template <typename T>
@@ -72,3 +73,5 @@ TEST(TaskRunnerTest, MultiProducers) {
     EXPECT_EQ(got_values.count(i), 1ul);
   }
 }
+
+}  // namespace bcf

@@ -5,6 +5,8 @@
 
 #include <utility>
 
+namespace bcf {
+
 class ScopedFd {
  public:
   explicit ScopedFd(int fd = -1) : fd_(fd) {}
@@ -30,5 +32,7 @@ class ScopedFd {
  private:
   int fd_ = -1;
 };
+
+}  // namespace bcf
 
 #endif  // BASE_SCOPED_FD_H_

@@ -2,6 +2,8 @@
 
 #include <utility>
 
+namespace bcf {
+
 // static
 thread_local std::shared_ptr<TaskRunner> TaskRunner::current_task_runner_;
 
@@ -49,3 +51,5 @@ void TaskRunner::RunLoop() {
     }
   }
 }
+
+}  // namespace bcf

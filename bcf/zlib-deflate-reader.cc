@@ -4,6 +4,7 @@
 
 #include "absl/memory/memory.h"
 
+namespace bcf {
 namespace {
 
 constexpr int kCompressionLevel = 6;
@@ -60,3 +61,5 @@ Result<ssize_t> ZlibDeflateReader::Read(absl::Span<char> buf) {
 
   return buf.size() - stream_.avail_out;
 }
+
+}  // namespace bcf

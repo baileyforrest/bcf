@@ -2,6 +2,7 @@
 
 #include "absl/strings/str_cat.h"
 
+namespace bcf {
 namespace util {
 
 Result<std::string> CanonicalizePath(const std::string& input) {
@@ -14,3 +15,4 @@ Result<std::string> CanonicalizePath(const std::string& input) {
 }
 
 }  // namespace util
+}  // namespace bcf

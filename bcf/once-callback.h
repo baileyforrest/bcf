@@ -7,6 +7,8 @@
 #include "absl/base/macros.h"
 #include "base/once-callback-internal.h"
 
+namespace bcf {
+
 class OnceCallback {
  public:
   using BoundFunctionPtr =
@@ -35,5 +37,7 @@ OnceCallback BindOnce(F&& func, Args&&... args) {
           std::forward<F>(func), std::forward<Args>(args)...));
   return OnceCallback(std::move(bound_function));
 }
+
+}  // namespace bcf
 
 #endif  // ONCE_CALLBACK_H_

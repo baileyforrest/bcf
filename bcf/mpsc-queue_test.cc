@@ -6,6 +6,8 @@
 #include "base/mpsc-queue.h"
 #include "gtest/gtest.h"
 
+namespace bcf {
+
 TEST(MpscQueueTest, Basic) {
   MpscQueue<int> queue;
   EXPECT_TRUE(queue.Empty());
@@ -84,3 +86,5 @@ TEST(MpscQueueTest, WaitNotEmpty) {
 
   thread.join();
 }
+
+}  // namespace bcf

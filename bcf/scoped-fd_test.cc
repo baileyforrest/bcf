@@ -4,7 +4,7 @@
 #include <memory>
 
 #include "absl/memory/memory.h"
-#include "base/scoped-fd.h"
+#include "bcf/scoped-fd.h"
 #include "gtest/gtest.h"
 
 namespace bcf {

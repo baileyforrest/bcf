@@ -3,9 +3,9 @@
 #include <iomanip>
 #include <string>
 
-namespace bcf {
+#include "bcf/logging.h"
 
-#include "base/logging.h"
+namespace bcf {
 
 int gVerboseLogLevel = 0;
 

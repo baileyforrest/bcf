@@ -1,8 +1,8 @@
 #include <cstdlib>
 
-#include "base/logging.h"
-#include "base/stdin-reader.h"
-#include "base/zlib-deflate-reader.h"
+#include "bcf/logging.h"
+#include "bcf/stdin-reader.h"
+#include "bcf/zlib-deflate-reader.h"
 
 
 namespace bcf {

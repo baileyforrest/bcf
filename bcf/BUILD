@@ -1,14 +1,9 @@
 package(default_visibility = ["//visibility:public"])
 
 cc_library(
-    name = "base",
-    srcs = [
-        "logging.cc",
-    ],
+    name = "err",
     hdrs = [
         "err.h",
-        "logging.h",
-        "scoped-destructor.h",
     ],
     deps = [
         "@absl//absl/base",
@@ -22,7 +17,7 @@ cc_test(
         "err_test.cc",
     ],
     deps = [
-        ":base",
+        ":err",
         "@gtest//:gtest_main",
     ],
 )
@@ -36,8 +31,18 @@ cc_library(
         "file-reader.h",
     ],
     deps = [
-        ":base",
+        ":err",
         ":reader",
+    ],
+)
+
+cc_library(
+    name = "logging",
+    srcs = [
+        "logging.cc",
+    ],
+    hdrs = [
+        "logging.h",
     ],
 )
 
@@ -94,8 +99,18 @@ cc_library(
         "reader.h",
     ],
     deps = [
-        ":base",
+        ":err",
         "@absl//absl/types:span",
+    ],
+)
+
+cc_library(
+    name = "scoped-destructor",
+    hdrs = [
+        "scoped-destructor.h",
+    ],
+    deps = [
+        "@absl//absl/base",
     ],
 )
 
@@ -124,7 +139,7 @@ cc_library(
         "stdin-reader.h",
     ],
     deps = [
-        ":base",
+        ":err",
         ":reader",
     ],
 )
@@ -163,7 +178,7 @@ cc_library(
         "util.h",
     ],
     deps = [
-        ":base",
+        ":err",
         "@absl//absl/base",
         "@absl//absl/strings",
     ],
@@ -179,7 +194,7 @@ cc_library(
     ],
     linkopts = ["-lz"],
     deps = [
-        ":base",
+        ":logging",
         ":reader",
     ],
 )

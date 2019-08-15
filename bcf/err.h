@@ -131,7 +131,6 @@ class Result<void> {
  private:
   Err err_;
   bool ok_ = false;
-  bool destroyed_ = false;
 };
 
 }  // namespace bcf

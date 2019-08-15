@@ -2,7 +2,7 @@
 #define BASE_READER_H_
 
 #include "absl/types/span.h"
-#include "base/err.h"
+#include "bcf/err.h"
 
 namespace bcf {
 

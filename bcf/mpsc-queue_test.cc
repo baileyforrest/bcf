@@ -3,7 +3,7 @@
 #include <thread>
 #include <vector>
 
-#include "base/mpsc-queue.h"
+#include "bcf/mpsc-queue.h"
 #include "gtest/gtest.h"
 
 namespace bcf {

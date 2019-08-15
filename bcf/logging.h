@@ -36,8 +36,8 @@ std::ostream& GetNullStream();
 }  // namespace logging_internal
 }  // namespace bcf
 
-#define LOG(type) Logger(Logger::Type::type, 0, __FILE__, __LINE__).stream()
+#define LOG(type) bcf::Logger(bcf::Logger::Type::type, 0, __FILE__, __LINE__).stream()
 #define VLOG(level)                                                     \
   ((gVerboseLogLevel >= level)                                          \
-       ? Logger(Logger::Type::INFO, level, __FILE__, __LINE__).stream() \
+       ? bcf::Logger(bcf::Logger::Type::INFO, level, __FILE__, __LINE__).stream() \
        : logging_internal::GetNullStream())

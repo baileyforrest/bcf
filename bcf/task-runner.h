@@ -5,8 +5,8 @@
 #include <memory>
 #include <thread>
 
-#include "base/mpsc-queue.h"
-#include "base/once-callback.h"
+#include "bcf/mpsc-queue.h"
+#include "bcf/once-callback.h"
 
 namespace bcf {
 

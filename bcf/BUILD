@@ -23,6 +23,17 @@ cc_test(
 )
 
 cc_library(
+    name = "err-testing",
+    hdrs = [
+        "err-testing.h",
+    ],
+    deps = [
+        "@absl//absl/base",
+        "@absl//absl/strings",
+    ],
+)
+
+cc_library(
     name = "file-reader",
     srcs = [
         "file-reader.cc",

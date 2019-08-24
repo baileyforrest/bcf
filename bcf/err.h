@@ -12,7 +12,7 @@
 
 namespace bcf {
 
-class Err {
+class ABSL_MUST_USE_RESULT Err {
  public:
   explicit Err(absl::string_view msg) : msg_(msg) {}
   Err(const Err&) = default;
@@ -36,7 +36,7 @@ inline std::ostream& operator<<(std::ostream& os, const Err& err) {
 }
 
 template <typename T>
-class Result {
+class ABSL_MUST_USE_RESULT Result {
  public:
   Result(T result)  // NOLINT(runtime/explicit)
       : result_(std::move(result)),
@@ -105,7 +105,7 @@ class Result {
 };
 
 template <>
-class Result<void> {
+class ABSL_MUST_USE_RESULT Result<void> {
  public:
   struct placeholder {};
 

@@ -20,10 +20,10 @@ class ScopedFd {
     return *this;
   }
 
-  explicit operator bool() const { return fd_ >= 0; }
+  explicit operator bool() const { return fd_ > 0; }
   int operator*() const { return fd_; }
   void reset() {
-    if (fd_ >= 0) {
+    if (fd_ > 0) {
       close(fd_);
     }
     fd_ = -1;

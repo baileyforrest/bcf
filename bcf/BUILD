@@ -6,8 +6,8 @@ cc_library(
         "err.h",
     ],
     deps = [
-        "@com_google_absl//com_google_absl/base",
-        "@com_google_absl//com_google_absl/strings",
+        "@com_google_absl//absl/base",
+        "@com_google_absl//absl/strings",
     ],
 )
 
@@ -28,8 +28,8 @@ cc_library(
         "err-testing.h",
     ],
     deps = [
-        "@com_google_absl//com_google_absl/base",
-        "@com_google_absl//com_google_absl/strings",
+        "@com_google_absl//absl/base",
+        "@com_google_absl//absl/strings",
     ],
 )
 
@@ -63,8 +63,8 @@ cc_library(
         "mpsc-queue.h",
     ],
     deps = [
-        "@com_google_absl//com_google_absl/base",
-        "@com_google_absl//com_google_absl/synchronization",
+        "@com_google_absl//absl/base",
+        "@com_google_absl//absl/synchronization",
     ],
 )
 
@@ -88,7 +88,7 @@ cc_library(
         "once-callback.h",
     ],
     deps = [
-        "@com_google_absl//com_google_absl/base",
+        "@com_google_absl//absl/base",
     ],
 )
 
@@ -99,7 +99,7 @@ cc_test(
     ],
     deps = [
         ":once-callback",
-        "@com_google_absl//com_google_absl/memory",
+        "@com_google_absl//absl/memory",
         "@gtest//:gtest_main",
     ],
 )
@@ -111,7 +111,7 @@ cc_library(
     ],
     deps = [
         ":err",
-        "@com_google_absl//com_google_absl/types:span",
+        "@com_google_absl//absl/types:span",
     ],
 )
 
@@ -121,7 +121,7 @@ cc_library(
         "scoped-destructor.h",
     ],
     deps = [
-        "@com_google_absl//com_google_absl/base",
+        "@com_google_absl//absl/base",
     ],
 )
 
@@ -139,7 +139,7 @@ cc_test(
     ],
     deps = [
         ":scoped-fd",
-        "@com_google_absl//com_google_absl/memory",
+        "@com_google_absl//absl/memory",
         "@gtest//:gtest_main",
     ],
 )
@@ -190,8 +190,8 @@ cc_library(
     ],
     deps = [
         ":err",
-        "@com_google_absl//com_google_absl/base",
-        "@com_google_absl//com_google_absl/strings",
+        "@com_google_absl//absl/base",
+        "@com_google_absl//absl/strings",
     ],
 )
 

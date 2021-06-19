@@ -1,1 +1,1 @@
-workspace(name = "libbcf")
+workspace(name = "bcf")

@@ -6,8 +6,8 @@ cc_library(
         "err.h",
     ],
     deps = [
-        "@absl//absl/base",
-        "@absl//absl/strings",
+        "@com_google_absl//com_google_absl/base",
+        "@com_google_absl//com_google_absl/strings",
     ],
 )
 
@@ -28,8 +28,8 @@ cc_library(
         "err-testing.h",
     ],
     deps = [
-        "@absl//absl/base",
-        "@absl//absl/strings",
+        "@com_google_absl//com_google_absl/base",
+        "@com_google_absl//com_google_absl/strings",
     ],
 )
 
@@ -63,8 +63,8 @@ cc_library(
         "mpsc-queue.h",
     ],
     deps = [
-        "@absl//absl/base",
-        "@absl//absl/synchronization",
+        "@com_google_absl//com_google_absl/base",
+        "@com_google_absl//com_google_absl/synchronization",
     ],
 )
 
@@ -88,7 +88,7 @@ cc_library(
         "once-callback.h",
     ],
     deps = [
-        "@absl//absl/base",
+        "@com_google_absl//com_google_absl/base",
     ],
 )
 
@@ -99,7 +99,7 @@ cc_test(
     ],
     deps = [
         ":once-callback",
-        "@absl//absl/memory",
+        "@com_google_absl//com_google_absl/memory",
         "@gtest//:gtest_main",
     ],
 )
@@ -111,7 +111,7 @@ cc_library(
     ],
     deps = [
         ":err",
-        "@absl//absl/types:span",
+        "@com_google_absl//com_google_absl/types:span",
     ],
 )
 
@@ -121,7 +121,7 @@ cc_library(
         "scoped-destructor.h",
     ],
     deps = [
-        "@absl//absl/base",
+        "@com_google_absl//com_google_absl/base",
     ],
 )
 
@@ -139,7 +139,7 @@ cc_test(
     ],
     deps = [
         ":scoped-fd",
-        "@absl//absl/memory",
+        "@com_google_absl//com_google_absl/memory",
         "@gtest//:gtest_main",
     ],
 )
@@ -190,8 +190,8 @@ cc_library(
     ],
     deps = [
         ":err",
-        "@absl//absl/base",
-        "@absl//absl/strings",
+        "@com_google_absl//com_google_absl/base",
+        "@com_google_absl//com_google_absl/strings",
     ],
 )
 
